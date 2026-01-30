@@ -1,0 +1,7 @@
+https://hippochatbot.netlify.app/
+------
+C:\Users\Lenovo>curl -L -X POST "https://hippochatbot.netlify.app/.netlify/functions/chat" -H "Content-Type: application/json" -d "{\"message\":\"Hello, Hippo chatbot!\"}"
+{"reply":"Hello. Welcome to HippoClouds. How can I assist you with your cloud needs today? We offer services such as Cloud Strategy, IaC, Kubernetes, 24/7 Support, Security & Compliance, and Cost Optimization."}
+C:\Users\Lenovo>
+--------
+i want to create a chatbot for this website on down-right side of the corner . which is stable for every page . like a dialog . with beautiful design . 
