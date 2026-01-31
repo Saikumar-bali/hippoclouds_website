@@ -132,7 +132,7 @@ const HomePage = () => {
   // Create a ref to scroll to the services cards section
   const servicesCardsRef = useRef(null);
 
-  const backgroundSrc = "/ai.mp4";
+  const backgroundSrc = process.env.PUBLIC_URL + "/ai.mp4";
   const isVideo = backgroundSrc.endsWith(".mp4");
 
   // Function to handle smooth scroll to services cards with 100px offset

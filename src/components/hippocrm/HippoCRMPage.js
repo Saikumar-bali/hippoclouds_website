@@ -18,7 +18,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   height: '60vh',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundImage: 'url(/banner-sample.jpg)',
+  backgroundImage: `url(${process.env.PUBLIC_URL}/banner-sample.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -521,7 +521,7 @@ function HippoCRMPage() {
                         }}
                       >
                         {/* Your image or content goes here */}
-                        {/* Example: <img src="/your-image.jpg" alt="Slide" style={{ width: '100%' }} /> */}
+                        {/* Example: <img src={process.env.PUBLIC_URL + "/your-image.jpg"} alt="Slide" style={{ width: '100%' }} /> */}
 
                         <IconButton
                           onClick={toggleAutoPlay}

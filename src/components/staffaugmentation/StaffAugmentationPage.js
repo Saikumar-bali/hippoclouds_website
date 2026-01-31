@@ -27,7 +27,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   height: '60vh',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundImage: 'url(/banner-sample.jpg)',
+  backgroundImage: `url(${process.env.PUBLIC_URL}/banner-sample.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -67,7 +67,7 @@ const StaffAugmentationPage = () => {
       icon: <Computer sx={{ fontSize: 32 }} />,
       borderColor: colors.primaryIndigo,
       iconColor: colors.primaryIndigo,
-      image: "/Staff_Augmentation/1.jpg",
+      image: process.env.PUBLIC_URL + '/Staff_Augmentation/1.jpg',
       description: "Our developers are masters of the entire software development lifecycle, building resilient, scalable applications from concept to deployment.",
       items: [
         "Full-stack Developers",
@@ -81,7 +81,7 @@ const StaffAugmentationPage = () => {
       icon: <TrackChanges sx={{ fontSize: 32 }} />,
       borderColor: colors.green[500],
       iconColor: colors.green[500],
-      image: "/Staff_Augmentation/2.jpg",
+      image: process.env.PUBLIC_URL + '/Staff_Augmentation/2.jpg',
       description: "We source strategic thinkers who can drive successful outcomes. These specialists excel at defining roadmaps and managing scope.",
       items: [
         "Project Managers",
@@ -95,7 +95,7 @@ const StaffAugmentationPage = () => {
       icon: <Build sx={{ fontSize: 32 }} />,
       borderColor: colors.red[500],
       iconColor: colors.red[500],
-      image: "/Staff_Augmentation/3.jpg",
+      image: process.env.PUBLIC_URL + '/Staff_Augmentation/3.jpg',
       description: "Maintaining application quality and ensuring user satisfaction is paramount. This team provides rigorous testing across all environments.",
       items: [
         "Quality Assurance & Testing Engineers",
@@ -108,7 +108,7 @@ const StaffAugmentationPage = () => {
       icon: <Psychology sx={{ fontSize: 32 }} />,
       borderColor: colors.blue[500],
       iconColor: colors.blue[500],
-      image: "/Staff_Augmentation/4.jpg",
+      image: process.env.PUBLIC_URL + '/Staff_Augmentation/4.jpg',
       description: "The future runs on data and intelligence. Our experts turn raw data into actionable insights and build sophisticated machine learning models.",
       items: [
         "Data Analysts & Data Engineers",

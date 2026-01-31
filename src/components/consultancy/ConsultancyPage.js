@@ -19,7 +19,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   height: '60vh',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundImage: 'url(/banner-sample.jpg)',
+  backgroundImage: `url(${process.env.PUBLIC_URL}/banner-sample.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -70,7 +70,7 @@ export default function ConsultancyPage() {
       icon: <WorkOutline sx={{ fontSize: 24 }} />,
       borderColor: colors.indigo[600],
       iconColor: colors.indigo[600],
-      image: "/Consultancy/1.jpg",
+      image: process.env.PUBLIC_URL + '/Consultancy/1.jpg',
       services: [
         "Market research & competitor analysis",
         "Strategic planning & execution",
@@ -84,7 +84,7 @@ export default function ConsultancyPage() {
       icon: <Cloud sx={{ fontSize: 24 }} />,
       borderColor: colors.blue[600],
       iconColor: colors.blue[600],
-      image: "/Consultancy/2.jpg",
+      image: process.env.PUBLIC_URL + '/Consultancy/2.jpg',
       services: [
         "Digital transformation strategy",
         "Cloud adoption & modernization",
@@ -98,7 +98,7 @@ export default function ConsultancyPage() {
       icon: <AttachMoney sx={{ fontSize: 24 }} />,
       borderColor: colors.green[600],
       iconColor: colors.green[600],
-      image: "/Consultancy/3.jpg",
+      image: process.env.PUBLIC_URL + '/Consultancy/3.jpg',
       services: [
         "Financial planning & budgeting",
         "Investment and portfolio guidance",
@@ -113,7 +113,7 @@ export default function ConsultancyPage() {
       icon: <People sx={{ fontSize: 24 }} />,
       borderColor: colors.orange[600],
       iconColor: colors.orange[600],
-      image: "/Consultancy/4.jpg",
+      image: process.env.PUBLIC_URL + '/Consultancy/4.jpg',
       services: [
         "Talent acquisition & workforce planning",
         "Performance & policy development",
@@ -128,7 +128,7 @@ export default function ConsultancyPage() {
       icon: <RocketLaunch sx={{ fontSize: 24 }} />,
       borderColor: colors.red[600],
       iconColor: colors.red[600],
-      image: "/Consultancy/5.jpg",
+      image: process.env.PUBLIC_URL + '/Consultancy/5.jpg',
       services: [
         "Startup mentoring & business validation",
         "Funding & investor pitch guidance",

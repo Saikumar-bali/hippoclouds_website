@@ -21,7 +21,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   height: '60vh',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundImage: 'url(/banner-sample.jpg)',
+  backgroundImage: `url(${process.env.PUBLIC_URL}/banner-sample.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -96,7 +96,7 @@ const coreValues = [
 const ModernValueCard = styled(Card)(({ color }) => ({
   height: '100%',
   borderRadius: 12,
-  minWidth: 0, 
+  minWidth: 0,
   boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
   transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
   border: '1px solid #f0f0f0',
@@ -116,7 +116,7 @@ const ValueIconWrapper = styled(Box)(({ color }) => ({
   justifyContent: 'center',
   color: 'white',
   backgroundColor: color,
-  boxShadow: `0 0 0 8px ${color}20`, 
+  boxShadow: `0 0 0 8px ${color}20`,
   transition: 'box-shadow 0.3s ease',
 }));
 
@@ -282,7 +282,7 @@ export default function AboutUsPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ fontSize: '1.05rem', lineHeight: 1.7, color: '#555', position: 'relative', zIndex: 1 }}>
-                  To empower businesses with cutting-edge technology solutions that drive digital transformation, 
+                  To empower businesses with cutting-edge technology solutions that drive digital transformation,
                   accelerate innovation, and unlock sustainable growth in the digital economy.
                 </Typography>
               </MissionCard>
@@ -304,7 +304,7 @@ export default function AboutUsPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ fontSize: '1.05rem', lineHeight: 1.7, color: '#555', position: 'relative', zIndex: 1 }}>
-                  To be the global leader in cloud-based enterprise solutions, recognized for innovation, reliability, 
+                  To be the global leader in cloud-based enterprise solutions, recognized for innovation, reliability,
                   customer-centricity, and transformative impact across industries.
                 </Typography>
               </MissionCard>
@@ -314,108 +314,108 @@ export default function AboutUsPage() {
 
         {/* Values Section */}
         <Box sx={{ minHeight: '100vh', backgroundColor: '#f9fafb', py: 10 }}>
-      {/* Centered content box */}
-      <Box sx={{ maxWidth: 1200, mx: 'auto', px: { xs: 1, sm: 2 } }}> 
-        
-        {/* Header Section */}
-        <Box sx={{ mb: 10 }}>
-          <SectionTitle>Our Core Values</SectionTitle>
-          <Typography
-            sx={{
-              textAlign: 'center',
-              fontSize: '1.2rem',
-              color: 'grey.600',
-              mb: 8,
-              maxWidth: '800px',
-              mx: 'auto',
-              fontWeight: 400,
-            }}
-          >
-            These principles guide every decision we make and every relationship we build with our clients and partners.
-          </Typography>
-        </Box>
+          {/* Centered content box */}
+          <Box sx={{ maxWidth: 1200, mx: 'auto', px: { xs: 1, sm: 2 } }}>
 
-        {/* Values Layout: Switched to Flexbox for rigid 3-column layout */}
-        <Box 
-          sx={{ 
-            display: 'flex', 
-            flexWrap: 'wrap', 
-            // Use negative margin to handle the gap on the items
-            mx: -1, 
-            justifyContent: 'center' 
-          }}
-        > 
-          {coreValues.map((value, index) => {
-            const IconComponent = value.icon;
-
-            return (
-              // Individual item box: set to exactly 1/3 width and add margin/padding
-              <Box 
-                key={index}
+            {/* Header Section */}
+            <Box sx={{ mb: 10 }}>
+              <SectionTitle>Our Core Values</SectionTitle>
+              <Typography
                 sx={{
-                    width: '33.333%', // Enforces 3 columns exactly
-                    p: 1, // Padding to create the gap
-                    // Simple animation effect using inline style
-                    animation: `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`,
-                    opacity: 0,
-                    '@keyframes fadeInUp': {
-                        from: { opacity: 0, transform: 'translateY(20px)' },
-                        to: { opacity: 1, transform: 'translateY(0)' },
-                    },
+                  textAlign: 'center',
+                  fontSize: '1.2rem',
+                  color: 'grey.600',
+                  mb: 8,
+                  maxWidth: '800px',
+                  mx: 'auto',
+                  fontWeight: 400,
                 }}
               >
-                <ModernValueCard color={value.color}>
-                  {/* Minimized padding (p: 1) for max compactness */}
-                  <CardContent sx={{ position: 'relative', zIndex: 1, p: 2 }}>
-                    <ValueIconWrapper color={value.color}>
-                      <IconComponent sx={{ fontSize: '28px' }} />
-                    </ValueIconWrapper>
+                These principles guide every decision we make and every relationship we build with our clients and partners.
+              </Typography>
+            </Box>
 
-                    <Typography
-                      variant="h5"
-                      component="h3"
-                      sx={{
-                        fontWeight: 700,
-                        mb: 1,
-                        color: 'grey.900',
-                        fontSize: '1.4rem', 
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {value.title}
-                    </Typography>
+            {/* Values Layout: Switched to Flexbox for rigid 3-column layout */}
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                // Use negative margin to handle the gap on the items
+                mx: -1,
+                justifyContent: 'center'
+              }}
+            >
+              {coreValues.map((value, index) => {
+                const IconComponent = value.icon;
 
-                    <Typography
-                      sx={{
-                        fontSize: '0.75rem', 
-                        fontWeight: 600,
-                        color: value.color,
-                        mb: 1,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.8px',
-                      }}
-                    >
-                      {value.tagline}
-                    </Typography>
+                return (
+                  // Individual item box: set to exactly 1/3 width and add margin/padding
+                  <Box
+                    key={index}
+                    sx={{
+                      width: '33.333%', // Enforces 3 columns exactly
+                      p: 1, // Padding to create the gap
+                      // Simple animation effect using inline style
+                      animation: `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`,
+                      opacity: 0,
+                      '@keyframes fadeInUp': {
+                        from: { opacity: 0, transform: 'translateY(20px)' },
+                        to: { opacity: 1, transform: 'translateY(0)' },
+                      },
+                    }}
+                  >
+                    <ModernValueCard color={value.color}>
+                      {/* Minimized padding (p: 1) for max compactness */}
+                      <CardContent sx={{ position: 'relative', zIndex: 1, p: 2 }}>
+                        <ValueIconWrapper color={value.color}>
+                          <IconComponent sx={{ fontSize: '28px' }} />
+                        </ValueIconWrapper>
 
-                    <Typography
-                      sx={{
-                        fontSize: '0.9rem', 
-                        lineHeight: 1.5,
-                        color: 'grey.700',
-                        fontWeight: 400,
-                      }}
-                    >
-                      {value.description}
-                    </Typography>
-                  </CardContent>
-                </ModernValueCard>
-              </Box>
-            );
-          })}
+                        <Typography
+                          variant="h5"
+                          component="h3"
+                          sx={{
+                            fontWeight: 700,
+                            mb: 1,
+                            color: 'grey.900',
+                            fontSize: '1.4rem',
+                            lineHeight: 1.3,
+                          }}
+                        >
+                          {value.title}
+                        </Typography>
+
+                        <Typography
+                          sx={{
+                            fontSize: '0.75rem',
+                            fontWeight: 600,
+                            color: value.color,
+                            mb: 1,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.8px',
+                          }}
+                        >
+                          {value.tagline}
+                        </Typography>
+
+                        <Typography
+                          sx={{
+                            fontSize: '0.9rem',
+                            lineHeight: 1.5,
+                            color: 'grey.700',
+                            fontWeight: 400,
+                          }}
+                        >
+                          {value.description}
+                        </Typography>
+                      </CardContent>
+                    </ModernValueCard>
+                  </Box>
+                );
+              })}
+            </Box>
+          </Box>
         </Box>
-      </Box>
-    </Box>
 
         {/* Team Section */}
         <Box sx={{ mb: 8 }}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Link, IconButton, Stack } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -38,7 +39,7 @@ const MapContainer = styled(Box)(({ theme }) => ({
   boxShadow: theme.shadows[2],
   height: '100%',
   minHeight: '250px',
-  
+
   '& iframe': {
     width: '100%',
     height: '100%',
@@ -77,10 +78,10 @@ export default function Footer() {
                   Company
                 </Typography>
                 <Stack>
-                  <FooterLink href="/about" variant="body2">About Us</FooterLink>
-                  <FooterLink href="/contact" variant="body2">Contact</FooterLink>
-                  <FooterLink href="/partnership" variant="body2">Partnership</FooterLink>
-                  <FooterLink href="/internships" variant="body2">Internships</FooterLink>
+                  <FooterLink component={RouterLink} to="/about" variant="body2">About Us</FooterLink>
+                  <FooterLink component={RouterLink} to="/contact" variant="body2">Contact</FooterLink>
+                  <FooterLink component={RouterLink} to="/partnership" variant="body2">Partnership</FooterLink>
+                  <FooterLink component={RouterLink} to="/internships" variant="body2">Internships</FooterLink>
                 </Stack>
               </Grid>
 
@@ -90,10 +91,10 @@ export default function Footer() {
                   Services
                 </Typography>
                 <Stack>
-                  <FooterLink href="/services" variant="body2">Services</FooterLink>
-                  <FooterLink href="/consultancy" variant="body2">Consultancy</FooterLink>
-                  <FooterLink href="/bpo" variant="body2">BPO</FooterLink>
-                  <FooterLink href="/digitalmarketing" variant="body2">Digital Marketing</FooterLink>
+                  <FooterLink component={RouterLink} to="/services" variant="body2">Services</FooterLink>
+                  <FooterLink component={RouterLink} to="/consultancy" variant="body2">Consultancy</FooterLink>
+                  <FooterLink component={RouterLink} to="/bpo" variant="body2">BPO</FooterLink>
+                  <FooterLink component={RouterLink} to="/digitalmarketing" variant="body2">Digital Marketing</FooterLink>
                 </Stack>
               </Grid>
 
@@ -103,10 +104,10 @@ export default function Footer() {
                   Solutions
                 </Typography>
                 <Stack>
-                  <FooterLink href="/erpnext" variant="body2">ERPNext</FooterLink>
-                  <FooterLink href="/hippohrm" variant="body2">HippoHRM</FooterLink>
-                  <FooterLink href="/hippocrm" variant="body2">HippoCRM</FooterLink>
-                  <FooterLink href="/hippomint" variant="body2">HippoMint</FooterLink>
+                  <FooterLink component={RouterLink} to="/erpnext" variant="body2">ERPNext</FooterLink>
+                  <FooterLink component={RouterLink} to="/hippohrm" variant="body2">HippoHRM</FooterLink>
+                  <FooterLink component={RouterLink} to="/hippocrm" variant="body2">HippoCRM</FooterLink>
+                  <FooterLink component={RouterLink} to="/hippomint" variant="body2">HippoMint</FooterLink>
                 </Stack>
               </Grid>
 
@@ -130,10 +131,10 @@ export default function Footer() {
               Our Location
             </Typography>
             <MapContainer>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.3608297953783!2d83.30957121117216!3d17.727629583148765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39436951934c95%3A0xe19863490a0f8065!2sHIPPOCLOUD%20TECHNOLOGIES%20.!5e0!3m2!1sen!2sin!4v1760584245361!5m2!1sen!2sin" 
-                allowFullScreen 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.3608297953783!2d83.30957121117216!3d17.727629583148765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39436951934c95%3A0xe19863490a0f8065!2sHIPPOCLOUD%20TECHNOLOGIES%20.!5e0!3m2!1sen!2sin!4v1760584245361!5m2!1sen!2sin"
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="HippoClouds Technologies Location"
               />

@@ -12,7 +12,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   height: '60vh',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundImage: 'url(/banner-sample.jpg)',
+  backgroundImage: `url(${process.env.PUBLIC_URL}/banner-sample.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',

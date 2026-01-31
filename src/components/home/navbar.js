@@ -583,7 +583,7 @@ const Navbar = () => {
           }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
               <Link to="/">
-                <Box component="img" src="/hippo.jpg" alt="Vercel" sx={{ height: 40, width: 100, color: 'transparent' }} />
+                <Box component="img" src={process.env.PUBLIC_URL + "/hippo.jpg"} alt="Vercel" sx={{ height: 40, width: 100, color: 'transparent' }} />
               </Link>
 
               {!isMobile && (

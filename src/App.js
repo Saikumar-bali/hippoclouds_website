@@ -38,7 +38,7 @@ import { useState } from 'react';
 function App() {
   const [showChatbot, setShowChatbot] = useState(false);
   const [showLiveChat, setShowLiveChat] = useState(false);
-  
+
 
   const handleOpenChatbot = () => {
     setShowChatbot(true);
@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <ThemeProvider theme={theme}>
           <ScrollToTop />
           <Navbar />

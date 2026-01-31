@@ -39,7 +39,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   height: '60vh',
   color: '#fff',
   padding: theme.spacing(4),
-  backgroundImage: 'url(/banner-sample.jpg)',
+  backgroundImage: `url(${process.env.PUBLIC_URL}/banner-sample.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -124,14 +124,14 @@ const HippoMintPage = () => {
   ];
 
   const images = [
-    "/hippo_mint/3.webp",
-    "/hippo_mint/4.webp",
-    "/hippo_mint/5.webp",
-    "/hippo_mint/6.webp",
-    "/hippo_mint/7.webp",
-    "/hippo_mint/8.webp",
-    "/hippo_mint/9.webp",
-    "/hippo_mint/10.webp"
+    process.env.PUBLIC_URL + "/hippo_mint/3.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/4.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/5.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/6.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/7.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/8.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/9.webp",
+    process.env.PUBLIC_URL + "/hippo_mint/10.webp"
   ];
 
   const loopImages = [
@@ -429,26 +429,26 @@ const HippoMintPage = () => {
               Smart GST Billing & Inventory App for Indian Businesses
             </Typography>
             <Button
-                onClick={() => scrollToSection('cta-section')}
-                sx={{
-                  bgcolor: colors.primary,
-                  color: 'white',
-                  fontWeight: 600,
-                  py: 1,
-                  px: 3,
-                  mt: 2,
-                  borderRadius: '0.5rem',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                  '&:hover': {
-                    bgcolor: colors.primaryDark,
-                    transform: 'scale(1.05)'
-                  },
-                  transition: 'all 0.3s ease-in-out',
-                  textTransform: 'none'
-                }}
-              >
-                Download Now
-              </Button>
+              onClick={() => scrollToSection('cta-section')}
+              sx={{
+                bgcolor: colors.primary,
+                color: 'white',
+                fontWeight: 600,
+                py: 1,
+                px: 3,
+                mt: 2,
+                borderRadius: '0.5rem',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                '&:hover': {
+                  bgcolor: colors.primaryDark,
+                  transform: 'scale(1.05)'
+                },
+                transition: 'all 0.3s ease-in-out',
+                textTransform: 'none'
+              }}
+            >
+              Download Now
+            </Button>
           </motion.div>
         </Container>
       </HeroSection>
@@ -578,7 +578,7 @@ const HippoMintPage = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/hippo_mint/2.png"
+                  src={process.env.PUBLIC_URL + "/hippo_mint/2.png"}
                   alt="Google Play"
                   style={{ height: '50px' }}
                 />
@@ -926,8 +926,8 @@ const HippoMintPage = () => {
           </Container>
         </Box>
       </Box>
-      </Box>
-      );
+    </Box>
+  );
 };
 
-      export default HippoMintPage;
+export default HippoMintPage;
