@@ -263,12 +263,12 @@ const TECHNOLOGY_DATA = [
     description:
       "We utilize robust cloud solutions like AWS and Azure, paired with DevOps tools such as Docker, Kubernetes, and Jenkins, to ensure scalable, reliable, and continuous deployment for modern applications.",
     technologies: [
-      { name: 'AWS', link: '/aws-cloud-services', image: process.env.PUBLIC_URL + '/technologies/aws.png' },
-      { name: 'Google Cloud', link: '/cloud-application-development', image: process.env.PUBLIC_URL + '/technologies/google_cloud.png' },
-      { name: 'Docker', link: '#', image: process.env.PUBLIC_URL + '/technologies/docker.png' },
-      { name: 'Kubernets', link: '#', image: process.env.PUBLIC_URL + '/technologies/kubernetes.png' },
-      { name: 'Jenkins', link: '#', image: process.env.PUBLIC_URL + '/technologies/jenkins.png' },
-      { name: 'Azure', link: '/azure-web-services', image: process.env.PUBLIC_URL + '/technologies/azure.png' },
+      { name: 'AWS', link: '/aws-cloud-services', image: '/technologies/aws.png' },
+      { name: 'Google Cloud', link: '/cloud-application-development', image: '/technologies/google_cloud.png' },
+      { name: 'Docker', link: '#', image: '/technologies/docker.png' },
+      { name: 'Kubernets', link: '#', image: '/technologies/kubernetes.png' },
+      { name: 'Jenkins', link: '#', image: '/technologies/jenkins.png' },
+      { name: 'Azure', link: '/azure-web-services', image: '/technologies/azure.png' },
     ],
   },
 
@@ -279,12 +279,12 @@ const TECHNOLOGY_DATA = [
     description:
       "Our expertise spans leading JavaScript frameworks, including Angular, React, and Vue.js, along with core technologies like Express JS and Knockout JS, to build dynamic, responsive, and high-performance user interfaces.",
     technologies: [
-      { name: 'Angular JS', link: '/angular-development', image: process.env.PUBLIC_URL + '/technologies/angular.png' },
-      { name: 'React', link: '/top-reactjs-development-company', image: process.env.PUBLIC_URL + '/technologies/react.png' },
-      { name: 'Vue JS', link: '/vue-js-development', image: process.env.PUBLIC_URL + '/technologies/vue.png' },
-      { name: 'Express JS', link: '#', image: process.env.PUBLIC_URL + '/technologies/express_js.png' },
-      { name: 'Knockout JS', link: '#', image: process.env.PUBLIC_URL + '/technologies/knockout_js.png' },
-      { name: 'Javascript', link: '/javascript-application-development', image: process.env.PUBLIC_URL + '/technologies/javascript.png' },
+      { name: 'Angular JS', link: '/angular-development', image: '/technologies/angular.png' },
+      { name: 'React', link: '/top-reactjs-development-company', image: '/technologies/react.png' },
+      { name: 'Vue JS', link: '/vue-js-development', image: '/technologies/vue.png' },
+      { name: 'Express JS', link: '#', image: '/technologies/express_js.png' },
+      { name: 'Knockout JS', link: '#', image: '/technologies/knockout_js.png' },
+      { name: 'Javascript', link: '/javascript-application-development', image: '/technologies/javascript.png' },
     ],
   },
 
@@ -295,12 +295,12 @@ const TECHNOLOGY_DATA = [
     description:
       "We develop scalable and robust backend systems using powerful server-side languages and runtimes such as .Net, Java, Node JS, PHP, Python, and Ruby, ensuring high performance and data integrity.",
     technologies: [
-      { name: '.Net', link: '/dot-net-development', image: process.env.PUBLIC_URL + '/technologies/dot_net.png' },
-      { name: 'Java', link: '/java-development', image: process.env.PUBLIC_URL + '/technologies/java.png' },
-      { name: 'Node JS', link: '/node-js-development', image: process.env.PUBLIC_URL + '/technologies/node.png' },
-      { name: 'PHP', link: '/php-development', image: process.env.PUBLIC_URL + '/technologies/php.png' },
-      { name: 'Python', link: '/python-development-services', image: process.env.PUBLIC_URL + '/technologies/python.png' },
-      { name: 'Ruby', link: '#', image: process.env.PUBLIC_URL + '/technologies/ruby.png' },
+      { name: '.Net', link: '/dot-net-development', image: '/technologies/dot_net.png' },
+      { name: 'Java', link: '/java-development', image: '/technologies/java.png' },
+      { name: 'Node JS', link: '/node-js-development', image: '/technologies/node.png' },
+      { name: 'PHP', link: '/php-development', image: '/technologies/php.png' },
+      { name: 'Python', link: '/python-development-services', image: '/technologies/python.png' },
+      { name: 'Ruby', link: '#', image: '/technologies/ruby.png' },
     ],
   },
 
@@ -311,12 +311,12 @@ const TECHNOLOGY_DATA = [
     description:
       "We craft native and cross-platform mobile experiences for iOS and Android using frameworks like Flutter, Xamarin, React Native, and Ionic, delivering seamless performance across all devices.",
     technologies: [
-      { name: 'Android', link: '/best-android-app-development-company', image: process.env.PUBLIC_URL + '/technologies/android.png' },
-      { name: 'iOS', link: '/ios-app-development-company', image: process.env.PUBLIC_URL + '/technologies/apple.png' },
-      { name: 'Flutter', link: '/flutter-app-development-company', image: process.env.PUBLIC_URL + '/technologies/flutter.png' },
-      { name: 'Xamarin', link: '/xamarin-app-development', image: process.env.PUBLIC_URL + '/technologies/xamarin.png' },
-      { name: 'React Native', link: '/top-react-native-app-development-company', image: process.env.PUBLIC_URL + '/technologies/react.png' },
-      { name: 'Ionic', link: '/hire-ionic-developers', image: process.env.PUBLIC_URL + '/technologies/ionic.png' },
+      { name: 'Android', link: '/best-android-app-development-company', image: '/technologies/android.png' },
+      { name: 'iOS', link: '/ios-app-development-company', image: '/technologies/apple.png' },
+      { name: 'Flutter', link: '/flutter-app-development-company', image: '/technologies/flutter.png' },
+      { name: 'Xamarin', link: '/xamarin-app-development', image: '/technologies/xamarin.png' },
+      { name: 'React Native', link: '/top-react-native-app-development-company', image: '/technologies/react.png' },
+      { name: 'Ionic', link: '/hire-ionic-developers', image: '/technologies/ionic.png' },
     ],
   },
 
@@ -327,12 +327,12 @@ const TECHNOLOGY_DATA = [
     description:
       "We leverage the Microsoft ecosystem, including Sharepoint, PowerApps, Power Automate, Office 365, Teams, and Power BI, to deliver integrated enterprise solutions and streamline business processes.",
     technologies: [
-      { name: 'Sharepoint', link: '/sharepoint-development-services', image: process.env.PUBLIC_URL + '/technologies/sharepoint.png' },
-      { name: 'Powerapps', link: '/powerapps-development-company', image: process.env.PUBLIC_URL + '/technologies/powerapp.png' },
-      { name: 'Power Automate', link: '/power-automate-services', image: process.env.PUBLIC_URL + '/technologies/power_automate.png' },
-      { name: 'Office 365', link: '#', image: process.env.PUBLIC_URL + '/technologies/office365.png' },
-      { name: 'Teams', link: '#', image: process.env.PUBLIC_URL + '/technologies/teams.png' },
-      { name: 'Power BI', link: '/power-bi-consulting-services', image: process.env.PUBLIC_URL + '/technologies/power_bi.png' },
+      { name: 'Sharepoint', link: '/sharepoint-development-services', image: '/technologies/sharepoint.png' },
+      { name: 'Powerapps', link: '/powerapps-development-company', image: '/technologies/powerapp.png' },
+      { name: 'Power Automate', link: '/power-automate-services', image: '/technologies/power_automate.png' },
+      { name: 'Office 365', link: '#', image: '/technologies/office365.png' },
+      { name: 'Teams', link: '#', image: '/technologies/teams.png' },
+      { name: 'Power BI', link: '/power-bi-consulting-services', image: '/technologies/power_bi.png' },
     ],
   },
 
@@ -343,12 +343,12 @@ const TECHNOLOGY_DATA = [
     description:
       "Our database expertise covers relational and NoSQL systems like MsSQL, PostgreSQL, MySQL, MongoDB, Cassandra, and Oracle, ensuring optimal data management and reliable transaction handling.",
     technologies: [
-      { name: 'MsSQL', link: '#', image: process.env.PUBLIC_URL + '/technologies/microsoft_sql.png' },
-      { name: 'PostgreSQL', link: '#', image: process.env.PUBLIC_URL + '/technologies/postgresql.png' },
-      { name: 'MySQL', link: '#', image: process.env.PUBLIC_URL + '/technologies/mysql.png' },
-      { name: 'Mongo DB', link: '/mongodb-development-services', image: process.env.PUBLIC_URL + '/technologies/mongo.png' },
-      { name: 'Cassandra', link: '#', image: process.env.PUBLIC_URL + '/technologies/cassandra.png' },
-      { name: 'Oracle', link: '#', image: process.env.PUBLIC_URL + '/technologies/oracle.png' },
+      { name: 'MsSQL', link: '#', image: '/technologies/microsoft_sql.png' },
+      { name: 'PostgreSQL', link: '#', image: '/technologies/postgresql.png' },
+      { name: 'MySQL', link: '#', image: '/technologies/mysql.png' },
+      { name: 'Mongo DB', link: '/mongodb-development-services', image: '/technologies/mongo.png' },
+      { name: 'Cassandra', link: '#', image: '/technologies/cassandra.png' },
+      { name: 'Oracle', link: '#', image: '/technologies/oracle.png' },
     ],
   },
 
@@ -359,12 +359,12 @@ const TECHNOLOGY_DATA = [
     description:
       "We test web applications on multiple browsers and platforms using Selenium, an open-source framework for automating web browsers...",
     technologies: [
-      { name: 'Katalon', link: '#', image: process.env.PUBLIC_URL + '/technologies/katalon.png' },
-      { name: 'Selenium', link: '#', image: process.env.PUBLIC_URL + '/technologies/selenium.png' },
-      { name: 'Apache JMeter', link: '#', image: process.env.PUBLIC_URL + '/technologies/apache_jmeter.png' },
-      { name: 'Jira', link: '#', image: process.env.PUBLIC_URL + '/technologies/jira.png' },
-      { name: 'Postman', link: '#', image: process.env.PUBLIC_URL + '/technologies/postman.png' },
-      { name: 'BrowserStack', link: '#', image: process.env.PUBLIC_URL + '/technologies/browserstack.png' },
+      { name: 'Katalon', link: '#', image: '/technologies/katalon.png' },
+      { name: 'Selenium', link: '#', image: '/technologies/selenium.png' },
+      { name: 'Apache JMeter', link: '#', image: '/technologies/apache_jmeter.png' },
+      { name: 'Jira', link: '#', image: '/technologies/jira.png' },
+      { name: 'Postman', link: '#', image: '/technologies/postman.png' },
+      { name: 'BrowserStack', link: '#', image: '/technologies/browserstack.png' },
     ],
   },
 ];

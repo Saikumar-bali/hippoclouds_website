@@ -255,11 +255,11 @@ function HippoCRMPage() {
 
 
   const images = [
-    { img: '/hippo_crm/1.jpg', title: 'Dashboard Overview' },
-    { img: '/hippo_crm/2.jpg', title: 'Customer Management' },
-    { img: '/hippo_crm/3.jpg', title: 'Sales Pipeline' },
-    { img: '/hippo_crm/4.jpg', title: 'Analytics Dashboard' },
-    { img: '/hippo_crm/5.jpg', title: 'Marketing Automation' },
+    { img: process.env.PUBLIC_URL + '/hippo_crm/1.jpg', title: 'Dashboard Overview' },
+    { img: process.env.PUBLIC_URL + '/hippo_crm/2.jpg', title: 'Customer Management' },
+    { img: process.env.PUBLIC_URL + '/hippo_crm/3.jpg', title: 'Sales Pipeline' },
+    { img: process.env.PUBLIC_URL + '/hippo_crm/4.jpg', title: 'Analytics Dashboard' },
+    { img: process.env.PUBLIC_URL + '/hippo_crm/5.jpg', title: 'Marketing Automation' },
   ];
 
   const features = [
@@ -662,41 +662,41 @@ function HippoCRMPage() {
           >
             Powerful Features
           </Typography>
-<Grid
-  container
-  spacing={{ xs: 3, sm: 4, md: 6 }}
-  justifyContent="center"
-  alignItems="stretch"
-  sx={{
-    mt: { xs: 4, sm: 6 },
-    mb: { xs: 6, sm: 10 },
-  }}
->
-  {featureData.map((f) => (
-    <Grid
-      item
-      key={f.id}
-      xs={12}    // 1 card per row on mobile
-      sm={6}     // 2 cards per row on tablets
-      md={4}     // 3 cards per row on desktop (like your original)
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Box
-        sx={{
-          width: "100%",
-          maxWidth: 360, // controls consistent width (matches your original)
-          height: "100%",
-          display: "flex",
-        }}
-      >
-        <FeatureCards {...f} />
-      </Box>
-    </Grid>
-  ))}
-</Grid>
+          <Grid
+            container
+            spacing={{ xs: 3, sm: 4, md: 6 }}
+            justifyContent="center"
+            alignItems="stretch"
+            sx={{
+              mt: { xs: 4, sm: 6 },
+              mb: { xs: 6, sm: 10 },
+            }}
+          >
+            {featureData.map((f) => (
+              <Grid
+                item
+                key={f.id}
+                xs={12}    // 1 card per row on mobile
+                sm={6}     // 2 cards per row on tablets
+                md={4}     // 3 cards per row on desktop (like your original)
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "100%",
+                    maxWidth: 360, // controls consistent width (matches your original)
+                    height: "100%",
+                    display: "flex",
+                  }}
+                >
+                  <FeatureCards {...f} />
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
 
         </Box>
       </Box>

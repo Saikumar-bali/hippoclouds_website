@@ -21,26 +21,26 @@ const HeroSection = styled(Box)(({ theme }) => ({
 }));
 
 const colors = {
-    primary: '#059669',
-    primaryDark: '#047857',
-    background: '#f7f9fb',
-    white: '#ffffff',
-    gray: {
-      100: '#f3f4f6',
-      200: '#e5e7eb',
-      300: '#d1d5db',
-      400: '#9ca3af',
-      500: '#6b7280',
-      600: '#4b5563',
-      700: '#374151',
-      800: '#1f2937',
-      900: '#111827'
-    },
-    emerald: {
-      100: '#d1fae5',
-      500: '#10b981'
-    }
-  };
+  primary: '#059669',
+  primaryDark: '#047857',
+  background: '#f7f9fb',
+  white: '#ffffff',
+  gray: {
+    100: '#f3f4f6',
+    200: '#e5e7eb',
+    300: '#d1d5db',
+    400: '#9ca3af',
+    500: '#6b7280',
+    600: '#4b5563',
+    700: '#374151',
+    800: '#1f2937',
+    900: '#111827'
+  },
+  emerald: {
+    100: '#d1fae5',
+    500: '#10b981'
+  }
+};
 // Data for the two applications
 const appsData = [
   {
@@ -53,13 +53,13 @@ const appsData = [
     description: "Stay informed with Vajione, your go-to news app delivering fast, reliable, and accurate news straight to your device. Whether it's breaking headlines, political updates, or local stories that matter, Vajione ensures you're always connected to the truth.",
     // Multiple images for slideshow
     images: [
-      "/vajione/1.webp",
-      "/vajione/2.webp",
-      "/vajione/3.webp",
-      "/vajione/4.webp",
-      "/vajione/5.jpg",
-      "/vajione/6.jpg",
-      "/vajione/7.jpg",
+      process.env.PUBLIC_URL + "/vajione/1.webp",
+      process.env.PUBLIC_URL + "/vajione/2.webp",
+      process.env.PUBLIC_URL + "/vajione/3.webp",
+      process.env.PUBLIC_URL + "/vajione/4.webp",
+      process.env.PUBLIC_URL + "/vajione/5.jpg",
+      process.env.PUBLIC_URL + "/vajione/6.jpg",
+      process.env.PUBLIC_URL + "/vajione/7.jpg",
     ],
     playStoreLink: "https://play.google.com/store/apps/details?id=com.vajione&pcampaignid=web_share",
     highlightsTitle: "🌟 Core Value Proposition",
@@ -90,14 +90,14 @@ const appsData = [
     description: "HippoMint is a smart retail invoicing app designed for Indian businesses. It helps you create GST-compliant invoices, manage inventory, track payments, and grow your business—all from your mobile and desktop.",
     // Multiple images for slideshow
     images: [
-      "/hippo_mint/3.webp",
-      "/hippo_mint/4.webp",
-      "/hippo_mint/5.webp",
-      "/hippo_mint/6.webp",
-      "/hippo_mint/7.webp",
-      "/hippo_mint/8.webp",
-      "/hippo_mint/9.webp",
-      "/hippo_mint/10.webp"
+      process.env.PUBLIC_URL + "/hippo_mint/3.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/4.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/5.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/6.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/7.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/8.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/9.webp",
+      process.env.PUBLIC_URL + "/hippo_mint/10.webp"
     ],
     playStoreLink: "https://play.google.com/store/apps/details?id=com.hippo.mint&pcampaignid=web_share",
     highlightsTitle: "✔ Billing & Inventory Powerhouse",
@@ -148,8 +148,8 @@ const FeatureList = ({ items, iconColor }) => (
 );
 
 const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+};
 
 // Component for the audience chips
 const AudienceChips = ({ items }) => (
@@ -161,7 +161,7 @@ const AudienceChips = ({ items }) => (
         label={item.text}
         size="small"
         variant="outlined"
-        sx={{ 
+        sx={{
           backgroundColor: 'white',
           borderColor: '#e5e7eb',
           color: '#374151',
@@ -212,7 +212,7 @@ const MobileScreenshotsView = ({ images }) => {
   }, [currentIndex, isPaused, images.length]);
 
   return (
-    
+
     <Box
       sx={{
         mx: "auto",
@@ -304,10 +304,10 @@ const MobileScreenshotsView = ({ images }) => {
       </IconButton>
 
       {/* Slide Indicators */}
-      <Box sx={{ 
-        position: "absolute", 
-        bottom: "12px", 
-        left: "50%", 
+      <Box sx={{
+        position: "absolute",
+        bottom: "12px",
+        left: "50%",
         transform: "translateX(-50%)",
         display: "flex",
         gap: "6px",
@@ -341,11 +341,11 @@ const AppShowcaseCard = ({ app }) => {
   };
 
   return (
-    <Paper sx={{ 
-      backgroundColor: app.bgColor, 
-      borderRadius: 3, 
+    <Paper sx={{
+      backgroundColor: app.bgColor,
+      borderRadius: 3,
       overflow: 'hidden',
-      mb: 4 
+      mb: 4
     }}>
       <CardContent sx={{ p: 4 }}>
         {/* USING FLEXBOX CONTAINER */}
@@ -355,7 +355,7 @@ const AppShowcaseCard = ({ app }) => {
           alignItems: 'center',
           gap: 4
         }}>
-          
+
           {/* LEFT COLUMN - IMAGE */}
           <Box sx={{
             flex: 1,
@@ -376,7 +376,7 @@ const AppShowcaseCard = ({ app }) => {
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
               <IconComponent style={{ width: 40, height: 40, color: app.color, marginRight: 12 }} />
               <Box>
-                <Typography variant="h4" sx={{fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem', lg: '1.25rem', xl: '1.65rem' }, fontWeight: 'bold', color: '#111827' }}>
+                <Typography variant="h4" sx={{ fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem', lg: '1.25rem', xl: '1.65rem' }, fontWeight: 'bold', color: '#111827' }}>
                   {app.name}
                 </Typography>
                 <Typography variant="h6" sx={{ fontSize: { xs: '0.9rem', sm: '1rem', md: '1.05rem', lg: '1.25rem', xl: '1.75rem' }, color: app.color, fontWeight: 600 }}>
@@ -392,7 +392,7 @@ const AppShowcaseCard = ({ app }) => {
 
             {/* Highlights */}
             <Paper sx={{ backgroundColor: 'white', p: 3, mb: 3, borderRadius: 2 }}>
-              <Typography variant="h6" sx={{ fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem', lg: '1.25rem', xl: '1.65rem' },fontWeight: 'bold', mb: 2, display: 'flex', alignItems: 'center' }}>
+              <Typography variant="h6" sx={{ fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem', lg: '1.25rem', xl: '1.65rem' }, fontWeight: 'bold', mb: 2, display: 'flex', alignItems: 'center' }}>
                 <Sparkles style={{ marginRight: 8, color: '#f59e0b' }} />
                 {app.highlightsTitle}
               </Typography>
@@ -418,13 +418,13 @@ const AppShowcaseCard = ({ app }) => {
             )}
 
             {/* CTA Section */}
-            <Box sx={{ 
-              borderTop: '1px solid #e5e7eb', 
-              pt: 3, 
-              display: 'flex', 
-              flexDirection: { xs: 'column', sm: 'row' }, 
+            <Box sx={{
+              borderTop: '1px solid #e5e7eb',
+              pt: 3,
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
               alignItems: { xs: 'center', sm: 'flex-start' },
-              gap: 2 
+              gap: 2
             }}>
               <Button
                 variant="contained"
@@ -447,8 +447,8 @@ const AppShowcaseCard = ({ app }) => {
               >
                 Download Now
               </Button>
-              <Typography sx={{ 
-                color: '#6b7280', 
+              <Typography sx={{
+                color: '#6b7280',
                 fontStyle: 'italic',
                 textAlign: { xs: 'center', sm: 'left' }
               }}>
@@ -465,81 +465,81 @@ const AppShowcaseCard = ({ app }) => {
 export default function AppDevSupportPage() {
   return (
     <Box>
-          <HeroSection>
-            <Container maxWidth="md" sx={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center' }}>
-              <Box sx={{ position: 'absolute', left: 0, top: '25%', bottom: '25%', width: '6px', backgroundColor: '#fff', borderRadius: '3px' }} />
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} sx={{ ml: 4, textAlign: 'left' }}>
-                <Typography variant="h3" component="h1" gutterBottom>
-                  App Development & Support
-                </Typography>
-                <Typography variant="h6" component="p">
-                  Building robust, scalable, and user-friendly applications tailored to your business needs, with ongoing support to ensure optimal performance.
-                </Typography>
-                <Button
-                    onClick={() => scrollToSection('cta-section')}
-                    sx={{
-                      bgcolor: colors.primary,
-                      color: 'white',
-                      fontWeight: 600,
-                      py: 1,
-                      px: 3,
-                      mt: 2,
-                      borderRadius: '0.5rem',
-                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                      '&:hover': {
-                        bgcolor: colors.primaryDark,
-                        transform: 'scale(1.05)'
-                      },
-                      transition: 'all 0.3s ease-in-out',
-                      textTransform: 'none'
-                    }}
-                  >
-                    Download Now
-                  </Button>
-              </motion.div>
-            </Container>
-          </HeroSection>
-    <Box sx={{ backgroundColor: 'white', py: 8 }}>
-      <Container maxWidth="lg">
-        {/* Header */}
-        <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Chip
-            label="Innovation Portfolio"
-            sx={{ 
-              backgroundColor: '#e0e7ff', 
-              color: '#4f46e5', 
-              fontWeight: 'bold',
-              mb: 3 
-            }}
-            icon={<Sparkles />}
-          />
-          <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 2, color: '#111827',fontSize: { xs: '1.1rem', sm: '1.2rem', md: '2.35rem', lg: '2.55rem', xl: '2.65rem' }, }}>
-            Showcase of Top-Tier Applications
-          </Typography>
-          <Typography variant="h6" sx={{ fontSize: '1.25rem',color: '#6b7280', maxWidth: 800, mx: 'auto' }}>
-            Presenting Vajione News for real-time truth, and HippoMint for smart, GST-compliant retail management, built to empower businesses.
-          </Typography>
-        </Box>
+      <HeroSection>
+        <Container maxWidth="md" sx={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ position: 'absolute', left: 0, top: '25%', bottom: '25%', width: '6px', backgroundColor: '#fff', borderRadius: '3px' }} />
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} sx={{ ml: 4, textAlign: 'left' }}>
+            <Typography variant="h3" component="h1" gutterBottom>
+              App Development & Support
+            </Typography>
+            <Typography variant="h6" component="p">
+              Building robust, scalable, and user-friendly applications tailored to your business needs, with ongoing support to ensure optimal performance.
+            </Typography>
+            <Button
+              onClick={() => scrollToSection('cta-section')}
+              sx={{
+                bgcolor: colors.primary,
+                color: 'white',
+                fontWeight: 600,
+                py: 1,
+                px: 3,
+                mt: 2,
+                borderRadius: '0.5rem',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                '&:hover': {
+                  bgcolor: colors.primaryDark,
+                  transform: 'scale(1.05)'
+                },
+                transition: 'all 0.3s ease-in-out',
+                textTransform: 'none'
+              }}
+            >
+              Download Now
+            </Button>
+          </motion.div>
+        </Container>
+      </HeroSection>
+      <Box sx={{ backgroundColor: 'white', py: 8 }}>
+        <Container maxWidth="lg">
+          {/* Header */}
+          <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Chip
+              label="Innovation Portfolio"
+              sx={{
+                backgroundColor: '#e0e7ff',
+                color: '#4f46e5',
+                fontWeight: 'bold',
+                mb: 3
+              }}
+              icon={<Sparkles />}
+            />
+            <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 2, color: '#111827', fontSize: { xs: '1.1rem', sm: '1.2rem', md: '2.35rem', lg: '2.55rem', xl: '2.65rem' }, }}>
+              Showcase of Top-Tier Applications
+            </Typography>
+            <Typography variant="h6" sx={{ fontSize: '1.25rem', color: '#6b7280', maxWidth: 800, mx: 'auto' }}>
+              Presenting Vajione News for real-time truth, and HippoMint for smart, GST-compliant retail management, built to empower businesses.
+            </Typography>
+          </Box>
 
-        {/* App Cards */}
-        <Box>
-          {appsData.map((app) => (
-            <AppShowcaseCard app={app} key={app.id} />
-          ))}
-        </Box>
+          {/* App Cards */}
+          <Box>
+            {appsData.map((app) => (
+              <AppShowcaseCard app={app} key={app.id} />
+            ))}
+          </Box>
 
-        {/* Footer */}
-        <Box sx={{ textAlign: 'center', mt: 8, pt: 4, borderTop: '1px solid #e5e7eb' }}>
-          <Button
-            variant="text"
-            endIcon={<ArrowRight />}
-            sx={{ color: '#4f46e5', fontWeight: 'bold' }}
-          >
-            Contact us for a Custom Demo
-          </Button>
-        </Box>
-      </Container>
-    </Box>
+          {/* Footer */}
+          <Box sx={{ textAlign: 'center', mt: 8, pt: 4, borderTop: '1px solid #e5e7eb' }}>
+            <Button
+              variant="text"
+              endIcon={<ArrowRight />}
+              sx={{ color: '#4f46e5', fontWeight: 'bold' }}
+            >
+              Contact us for a Custom Demo
+            </Button>
+          </Box>
+        </Container>
+      </Box>
     </Box>
   );
 }
